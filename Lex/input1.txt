@@ -1,0 +1,32 @@
+%% This is an example of modified Micro, input1.txt
+
+{%
+	Here
+	are
+	the comments
+%}
+
+begin
+ 
+declare A,I as integer;
+ declare B,C,D,size as real;
+ declare PI as real;
+ declare LLL(100) AS REAL;
+
+ PI:=3.1416;
+ B:=PI*B*B+C/D+0.345E-6;
+ 
+ FOR (I:=1 TO 100)
+   C:=LLL(I)+B*D-C;
+ ENDFOR
+
+ IF (C>=10000) THEN
+    WRITE("Good!");
+ ENDIF
+
+ C:=0;
+ WHILE(C<10)
+	WRITE("Good!");
+ ENDWHILE
+
+end

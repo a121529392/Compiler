@@ -1,0 +1,49 @@
+%% the beginning of an test data
+
+begin
+
+%% illegal token
+ declare A,,I as integer;
+ declare B..C,D,size as real;
+
+%% illegal ID
+ declare E, 012abc;
+ declare LLL(100) AS REAL;
+
+%% illegal integer
+ A:=0001;
+
+%% illegal float point
+ B:=abc.123;
+ B:=123.abc;
+ C:=.123;
+ C:=123.;
+ D:=0.123abc;
+ D:=abc0.123;
+
+%% illegal exponential float point
+ E:=3.1416e-5abc;
+
+%% illegal string
+ E:="abc123;
+
+%% illegal operator
+ B:=PI**B*/B+-C/+D*+0.345E-6;
+
+%% illegal assignment
+ FOR (I:=:=1 TO 100)
+   C:=,LLL(I)+B*D-C;
+ ENDFOR
+
+%% illegal comparisons
+ IF (C>===10000) THEN
+    WRITE("Good!");
+ ENDIF
+ IF (C><10000) THEN
+    WRITE("Good!");
+ ENDIF
+ IF (C=>10000) THEN
+    WRITE("Good!");
+ ENDIF
+
+end
